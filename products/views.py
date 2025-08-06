@@ -16,6 +16,6 @@ def index(request):
 
 def api_get_phones(request):
 	phones = Phone.objects.all().order_by('price')
-	json = serializers.seralize("json",pizzas) #este es el string que
+	json = serializers.seralize("json",phones) #este es el string que
 										# vamos a pasar en httpresponse
 	return HttpResponse(json)
